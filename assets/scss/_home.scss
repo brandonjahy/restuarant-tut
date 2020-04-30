@@ -1,5 +1,9 @@
 
 
+
+
+
+
 #welcome{
     display: grid;
     grid-template-columns: 350px 1fr;
@@ -12,6 +16,7 @@
         background: #fff;
         padding: 50px;
         position: relative;
+        
         .logo{
             display: flex;
             justify-content: center;
@@ -86,6 +91,48 @@
             }
     }
     .welcome-jumbo{
-        background: red;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: rgb(62,160,247);
+        background: -moz-radial-gradient(center, ellipse cover, rgba(62,160,247,1) 0%, rgba(9,113,206,1) 100%);
+        background: -webkit-radial-gradient(center, ellipse cover, rgba(62,160,247,1) 0%,rgba(9,113,206,1) 100%);
+        background: radial-gradient(ellipse at center, rgba(62,160,247,1) 0%,rgba(9,113,206,1) 100%);
+        overflow: hidden;
+        padding: 100px;
+        .status {
+            display: inline-block;
+            padding: 10px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: white;
+            background: #000;
+            border-radius: 5px;
+            align-self: flex-start;
+            margin-bottom: 20px;
+        }
+        h1{
+            font-size: 4rem;
+            font-weight: 900;
+            align-self: flex-start;
+            color: white;
+            margin-bottom: 100px;
+        }
+        img {
+            width: 90%;
+            max-width: 1000px;
+            // animation: moveUpandDown 2s  linear infinite;
+            // position: relative;
+        }
+        // @keyframes moveUpandDown {
+        //     0%, 100%{
+        //         bottom:0;
+        //     }
+        //     50%{
+        //         bottom:30px;
+        //     }
+        // }
     }
 }
