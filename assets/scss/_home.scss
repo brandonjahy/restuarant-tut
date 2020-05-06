@@ -208,9 +208,11 @@
     padding: 100px;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
     h2 {
         text-align: center;
+        margin-bottom: 3rem;
     }
 
     .button-rounded {
@@ -219,11 +221,70 @@
         display: inline-block;
         padding: 15px;
         border-radius: 30px;
+        margin-bottom: 130px;
     }
     .food-slider {
-
+        width: 100%;
+        max-width: 1400px;
+        display: flex;
+        margin-bottom: 2rem;
         .slide{
             width: 20%;
+            height: 500px;
+            position: relative;
+            cursor: pointer;
+            &:hover{
+                .background{
+                    background: #f59236;
+                    transform: translate3d(0, -100px,0);
+                }
+                .content{
+                    .food-title{
+                        color: #fff;
+                    }
+                    .food-discription{
+                        color: #fff;
+                    }
+                }
+            }
+            .background{
+                background: #fff;
+                top: 0;
+                bottom: 0;
+                height: 100%;
+                width: 100%;
+                z-index: 1;
+                position: absolute;
+                transition: transform .3s ease-in-out;
+            }
+            .content{
+                position: absolute;
+                padding: 20px;
+                width: 100%;
+                z-index: 2;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                // transition: all .3s ease-in-out;
+                .food-title{
+                    color: #ed4852;
+                    font-size: 2rem;
+                    font-weight: 900;
+                    margin-bottom: 3rem;
+                    // transition: all .3s ease-in-out;
+                }
+                .food-discription {
+                    font-size: .8rem;
+                    font-weight: 400;
+                    line-height: 1.8;
+                    margin-bottom: 3rem;
+                    color: #7a8d99;
+                }
+            }
+            img{
+                width: 95%;
+                max-width: 250px;
+            }
         }
     }
 }
@@ -231,5 +292,5 @@
 h2{
     font-size: 3rem;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 3rem;
 }
