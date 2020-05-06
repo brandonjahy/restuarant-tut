@@ -223,16 +223,51 @@
         border-radius: 30px;
         margin-bottom: 130px;
     }
-    .food-slider {
+    .container {
         width: 100%;
         max-width: 1400px;
-        display: flex;
-        margin-bottom: 2rem;
+        position: relative;
+        
+        .left-btn, .right-btn {
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            top: calc(50% - 25px);
+            background: red;
+            color: white;
+            z-index: 5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .left-btn {
+            left: -30px;
+        }
+        .right-btn {
+            right: -30px;
+        }
+    }
+    .food-slider {
+        width: 100%;
+        // max-width: 1400px;
+        // display: flex;
+        // margin-bottom: 2rem;
+        font-size: 0;
+        overflow: hidden;
+        position: relative;
+        .sliding-system {
+            white-space: nowrap;
+            transform: translate3d(-20%, 0, 0);
+        }
         .slide{
             width: 20%;
             height: 500px;
             position: relative;
             cursor: pointer;
+            display: inline-block;
+            white-space: normal;
             &:hover{
                 .background{
                     background: #f59236;
